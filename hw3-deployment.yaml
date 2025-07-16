@@ -15,7 +15,7 @@ spec:
         app: hw3-app
     spec:
       containers:
-      - name: my-app
+      - name: my-app3
         image: rmann14/hw3-image
         ports:
         - containerPort: 8080
