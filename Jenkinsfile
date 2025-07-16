@@ -3,14 +3,14 @@ pipeline {
 
     environment {
         DOCKERHUB_USER = 'rmann14'
-        IMAGE_NAME = 'hw2-image'
+        IMAGE_NAME = 'hw3-image'
         IMAGE_TAG = 'latest'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/rmann-14/SWE-645-HW2.git'
+                git 'https://github.com/rmann-14/SWE-645-HW3.git'
             }
         }
 
@@ -36,8 +36,8 @@ pipeline {
             steps {
                 withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
                     sh """
-                    kubectl create -f hw2-deployment.yaml
-                    kubectl create -f hw2-service.yaml
+                    kubectl create -f hw3-deployment.yaml
+                    kubectl create -f hw3-service.yaml
                     """
                 }
             }
