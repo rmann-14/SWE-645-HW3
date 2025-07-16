@@ -37,6 +37,7 @@ pipeline {
                 withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
                     sh """
                     kubectl create -f hw3-deployment.yaml
+                    kubectl create -f hw3-service.yaml
                     """
                 }
             }
