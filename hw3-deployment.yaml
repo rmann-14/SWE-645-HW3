@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: my-deployment
   labels:
-    app: hw2-app
+    app: hw3-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hw2-app
+      app: hw3-app
   template:
     metadata:
       labels:
-        app: hw2-app
+        app: hw3-app
     spec:
       containers:
       - name: my-app
-        image: rmann14/hw2-image
+        image: rmann14/hw3-image
         ports:
         - containerPort: 80
