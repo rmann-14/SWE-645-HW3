@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment
+  name: hw3-deployment
   labels:
     app: hw3-app
 spec:
@@ -18,4 +18,4 @@ spec:
       - name: my-app
         image: rmann14/hw3-image
         ports:
-        - containerPort: 80
+        - containerPort: 8080
